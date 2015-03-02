@@ -26,5 +26,10 @@ namespace UrlsAndRoutes.Controllers
 
             return View("ActionName");
         }
+
+        public RedirectToRouteResult MyActionMethod()
+        {
+            return RedirectToRoute(new { controller = "Home", action = "Index", id = "MyID" });
+        }
     }
 }
